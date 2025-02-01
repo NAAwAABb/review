@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Review System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+        <div class="shape shape-3"></div>
+    </div>
+    
+    <div class="container">
+        <header class="page-header">
+            <h1><i class="fas fa-comments"></i> Share Your Experience</h1>
+            <p class="subtitle">We value your feedback!</p>
+        </header>
+        
+        <div class="review-form">
+            <div class="form-header">
+                <i class="fas fa-pencil-alt form-icon"></i>
+                <h3>Write a Review</h3>
+            </div>
+            
+            <div class="rating-container">
+                <p class="rating-label">Rate your experience:</p>
+                <div class="rating">
+                    <span class="star" data-rating="1"><i class="fas fa-star"></i></span>
+                    <span class="star" data-rating="2"><i class="fas fa-star"></i></span>
+                    <span class="star" data-rating="3"><i class="fas fa-star"></i></span>
+                    <span class="star" data-rating="4"><i class="fas fa-star"></i></span>
+                    <span class="star" data-rating="5"><i class="fas fa-star"></i></span>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-user input-icon"></i>
+                <input type="text" id="name" placeholder="Your Name" required>
+            </div>
+
+            <div class="input-group">
+                <i class="fas fa-comment input-icon"></i>
+                <textarea id="review-text" placeholder="Share your thoughts..." required></textarea>
+            </div>
+
+            <button id="submit-review">
+                <i class="fas fa-paper-plane"></i> Submit Review
+            </button>
+        </div>
+
+        <div class="reviews-section">
+            <div class="section-header">
+                <h2><i class="fas fa-list"></i> Recent Reviews</h2>
+                <div class="review-stats">
+                    <span id="review-count">0 Reviews</span>
+                </div>
+            </div>
+            <div id="reviews-container">
+                <!-- Reviews will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
